@@ -1,14 +1,18 @@
 import streamlit as st
 import pandas as pd
+import os
 
+def load_css(css_file):
+    css_path = os.path.join(os.path.dirname(__file__), css_file)
+    print(f"Loading CSS from: {css_path}")
+    try:
+        with open(css_path) as f:
+            st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+    except FileNotFoundError:
+        print(f"File not found: {css_path}")
 
-
-# Load custom CSS
-def load_css(style_file):
-    css_file = os.path.join(style_file)
-    with open(css_file) as f:
-        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 load_css('styles.css')
+
 
 # Page title
 st.title('Growth Mindset Challange in Streamlit')
