@@ -13,10 +13,8 @@ def load_css(css_file):
 
 load_css('styles.css')
 
-
 # Page title
-st.title('Growth Mindset Challange in Streamlit')
-
+st.title('Growth Mindset Challenge in Streamlit')
 
 # Initialize task list
 @st.cache_data(ttl=60)
@@ -30,7 +28,10 @@ df = get_data()
 
 # Save DataFrame to CSV
 def save_data(dataframe):
+    # Create the directory if it doesn't exist
+    os.makedirs('data', exist_ok=True)
     dataframe.to_csv('data/tasks.csv', index=False)
+    print(f"Data saved to data/tasks.csv")
 
 # Title and description
 st.title('Task Management Application')
