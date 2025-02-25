@@ -1,0 +1,95 @@
+/* styles.css */
+
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1E1E1E;
+    font-family: 'Arial', sans-serif;
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: #F39C12;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.success {
+    color: #4CAF50;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+}
+
+input, select, button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+}
+
+input {
+    background-color: #333333;
+    border: 1px solid #555555;
+    color: #FFFFFF;
+}
+
+select {
+    background-color: #333333;
+    border: 1px solid #555555;
+    color: #FFFFFF;
+}
+
+button {
+    background-color: #F39C12;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #E67E22;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #555555;
+}
+
+th {
+    background-color: #F39C12;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #2C2C2C;
+}
+
+tr:hover {
+    background-color: #3C3C3C;
+    color: #F39C12;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    input, select, button, table {
+        width: 100%;
+        font-size: 14px;
+    }
+}
