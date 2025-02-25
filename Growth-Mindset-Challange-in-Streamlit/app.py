@@ -13,8 +13,6 @@ def load_css(css_file):
 
 load_css('styles.css')
 
-# Page title
-st.title('Growth Mindset Challenge in Streamlit')
 
 # Initialize task list
 @st.cache_data(ttl=60)
