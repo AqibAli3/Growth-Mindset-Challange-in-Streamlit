@@ -4,10 +4,10 @@ import pandas as pd
 
 
 # Load custom CSS
-def load_css(css_file):
+def load_css(style_file):
+    css_file = os.path.join(style_file)
     with open(css_file) as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
-
 load_css('styles.css')
 
 # Page title
